@@ -3,29 +3,37 @@
 
 Classes de ip
 A   0     a   127 - 16.777.216 combinações
+
 B   128   a   191 - 65.536 combinações
+
 C   192   a   223 - 256 combinações
+
 D   224   a   239 - (TESTES DE NOVAS TECNOLOGIAS)
+
 E   240   a   255 - (MULTICASTS / UNICAST/ BROADCAST)
 
 Estudo baseado nesse vídeo:
+
 Redes 2 - IP, máscara de rede, gateway
 (https://www.youtube.com/watch?v=yLgansF_h1w)
 
 Um IP é composto por 32 bits 00000000.00000000.00000000.00000000 ou 4 octetos
 
 Rede - envio de informações / envio de pacote de rede
+
     >Máscara da Rede (intervalo de IP que compõe uma rede)
+
 Gateway - caminho que conecta uma rede em outra
 
 Máscara da Rede (intervalo de IP que compõe uma rede)
 
-### Entendendo a Rede
+## Entendendo a Rede
 
 Alguns exemplos de divisão de rede e host, pelo uso de diferentes máscaras.
 
 ___________________________________ exemplo 1 __________________________________________________
 
+```
 Imagine uma rede  192.       168.         0.          1
                 00000000.  00000000.   00000000.   00000000
 Que usa essa máscara         redes               |  hosts (usuário final que recebe a rede)
@@ -34,6 +42,7 @@ Que usa essa máscara         redes (24 bits)     |  hosts (8 bits)
 Nessa rede podemos ter HOSTS do IP    192.       168.         0.          0
 ao (isso usa 8 bits que dá 256)       192.       168.         0.          255
 
+```
 De todos esses IPS do 192.168.0.0 ao 192.168.0.255 precisamos saber que o IP 192.168.0.0 não é atribuido a nenhum host ele é o IP DA REDE (ele que vai representar aquela rede), e o último ip, o 192.168.0.255 é chamado de IP BROADCAST, uma das máquinas da rede pode mandar info pra que as outras máquinas da mesma rede recebam; 
 O QUE FAZ COM QUE TENHAMOS 254 HOSTS NESSA REDE
 
