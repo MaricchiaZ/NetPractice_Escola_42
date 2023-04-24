@@ -49,6 +49,7 @@ O QUE FAZ COM QUE TENHAMOS 254 HOSTS NESSA REDE
 
 ___________________________________ exemplo 2 __________________________________________________
 
+```
 Imagine uma rede  192.       168.         0.          1
                 00000000.  00000000.   00000000.   00000000
 Que usa essa máscara         redes                  |  hosts (usuário final que recebe a rede)
@@ -57,6 +58,8 @@ Que usa essa máscara         redes (25 bits)        |  hosts (7 bits)
 Nessa rede podemos ter HOSTS do IP    192.       168.         0.          0
 ao (isso usa 8 bits que dá 127)       192.       168.         0.          127
 
+```
+
 De todos esses IPS do 192.168.0.0 ao 192.168.0.127 precisamos saber que o IP 192.168.0.0 não é atribuido a nenhum host ele é o IP DA REDE (ele que vai representar aquela rede), e o último ip, o 192.168.0.127 é chamado de IP BROADCAST, uma das máquinas da rede pode mandar info pra que as outras máquinas da mesma rede recebam; 
 O QUE FAZ COM QUE TENHAMOS 126 HOSTS NESSA REDE
 
@@ -64,6 +67,8 @@ Isso acaba criando uma sub_REDE de IPS do 192.168.0.128 ao 192.168.0.255 e que t
 
 
 ___________________________________ exemplo 3 __________________________________________________
+
+```
 
 Imagine uma rede   10.        0.         0.          1 
 E outra uma rede   10.        0.         2.          255 
@@ -74,6 +79,8 @@ Que usa essa máscara         redes (23 bits)  |  hosts (9 bits)
 Nessa rede podemos ter HOSTS do IP    10.       0.         0.          0
 ao (isso usa 9 bits que dá 512)       10.       0.         1.          255
 
+```
+
 De todos esses IPS do 10.0.0.0 ao 10.0.1.255 precisamos saber que o IP 192.168.0.0 não é atribuido a nenhum host ele é o IP DA REDE (ele que vai representar aquela rede), e o último ip, o 10.0.1.255 é chamado de IP BROADCAST, uma das máquinas da rede pode mandar info pra que as outras máquinas da mesma rede recebam; 
 O QUE FAZ COM QUE TENHAMOS 512 HOSTS NESSA REDE
 
@@ -81,36 +88,44 @@ ___________________________________ exemplo 4 __________________________________
 
 A rede com a máscara de 22 bits pra REDE e 10 bits para os hosts de IPS do 10.0.0.0 ao 10.0.3.255 sendo que o IP 10.0.0.0 não é atribuido a nenhum host ele é o IP DA REDE (ele que vai representar aquela rede), e o último ip, o 10.0.3.255 é chamado de IP BROADCAST, FAZ COM QUE TENHAMOS 1022 HOSTS NESSA REDE (1024 tirando o nome da rede e o broadcast)
 
+
 ### Entendendo o Gateway
 
+```
 Duas máquinas 192.168.0.0 e 192.168.0.10, 
 Imagine essa rede que usa essa máscara /24
 Que usa essa máscara         redes (24 bits)     |  hosts (8 bits)
 
+```
 Logo essa rede vai do IP 192.168.0.0 ao 192.168.0.255, então essas máquinas podem se comunicar diretamente.
 
 MAS
 
-se uma dessas máquinas quer acessar um site na internet de IP 200.200.200.200 precisa passar pelo GATEWAY (que pode ser um modem, ou um roteador, ou mesmo um servidor de internet)
+Se uma dessas máquinas quer acessar um site na internet de IP 200.200.200.200 precisa passar pelo GATEWAY (que pode ser um modem, ou um roteador, ou mesmo um servidor de internet)
 
 o GATEWAY conecta máquinas com redes FORA da rede delas.
+
 O GATEWAY pode ser o primeiro IP válido de uma rede: 192.168.0.1
 OU
 o último IP válido 192.168.0.254
 
 __________________________________________________________________________________________
-### CConceitos do Projeto
+### Conceitos do Projeto
 O que é ser um host?
 
-Host é todo e qualquer computador ou máquina ligada a uma rede por meio de um número de IP e domínio definido que tem como responsabilidade oferecer recursos, informações e serviços aos usuários. Também é conhecido como: hospedagem, hospedeiro ou anfitrião.
+Host é todo e qualquer computador ou máquina ligada a uma rede por meio de um número de IP e domínio definido que tem como responsabilidade oferecer recursos, informações e serviços aos usuários. Também é conhecido como: hospedagem, hospedeiro ou anfitrião. O endereço host é um número único presente em todos os dispositivos que acessam a internet. 
 
-Máscara - Determina quantos ips eu tenho na minha rede
+Para que serve o host? 
 
-Gateway - Gateway pode ser classificado como “portal” ou “portão”. Ele é considerado uma passagem entre dois ambientes distintos. Ou ainda, em outras palavras, é um sistema ou equipamento encarregado de estabelecer a comunicação entre duas redes. Serve para fazer as comunicações entre as redes.
+A função do host é identificar todos os equipamentos para que as ações e pacotes de dados possam ser ativados e enviados ao endereço correto.
 
-IP - endereço da rede.
+Máscara - Determina quantos IPs eu tenho na minha rede. É um número de 32 bits usado em um IP para separar a parte correspondente à rede pública, à sub-rede e aos hosts.
 
-Broadcast - é fazer uma transmissão de larga escala, comunicando com todos os dispositivos de uma mesma rede. “Broad” pode ser traduzido como amplo ou em larga escala; e “cast” pode ser traduzido como transmissão ou projeção
+Gateway - Gateway pode ser classificado como “portal” ou “portão”. Ele é considerado uma passagem entre dois ambientes distintos. Ou ainda, em outras palavras, é um sistema ou equipamento encarregado de estabelecer a comunicação entre duas redes. Serve para fazer as comunicações entre duas ou mais redes. (pode ser um modem ou roteador ou até outros tipos)
+
+IP - endereço da rede. Endereço IP, ou Protocolo de Internet, é o “CPF” do seu dispositivo, responsável por identificar a máquina em uma rede interna.
+
+Broadcast - é fazer uma transmissão de larga escala, comunicando com todos os dispositivos de uma mesma rede. “Broad” pode ser traduzido como amplo ou em larga escala; e “cast” pode ser traduzido como transmissão ou projeção então broadcasting é um método de transferência de mensagem para todos os receptores simultaneamente de uma mesma rede.
 
 LoopBack - quando o computador se comunica com ele mesmo.
 
@@ -118,8 +133,11 @@ LoopBack - quando o computador se comunica com ele mesmo.
 
 ### Alguns Ips são reservados para Private Networks:
 ● 10.0.0.0 – 10.255.255.255
+
 ● 172.16.0.0 – 172.31.255.255
+
 ● 192.168.0.0 – 192.168.255.255
+
 ● 127.0.0.0 – 127.255.255.25
 
 (existem vários outros, mas esses precisamos saber pra este projeto)
@@ -127,13 +145,14 @@ ________________________________________________________________________________
 
 ## COMO FUNCIONA ESSE PROJETO:
 
-Baixe o anexo da intra. Extraia o conteúdo para algum lugar. Clique em index.html.
+Baixe o anexo da intra. Extraia o conteúdo para algum lugar. Clique em "index.html".
 
 Você terá 2 opções. 
 
 1- Colocando seu login, você vai percorrer os exercícios do 1 ao 10, em ordem crescente.
 
-    Resolva o exercício, salve a sua configuração clicando em "Get my config" e salve o .json desse exercício (você deverá entregar o .json de todos os exercícios do 1 ao 10).
+    Resolva o exercício, salve a sua configuração clicando em "Get my config" e salve o .json desse exercício 
+    (você deverá entregar o .json de todos os exercícios do 1 ao 10).
 
 2- Modo avaliação (sem colocar nada no login)
 
@@ -156,6 +175,7 @@ ________________________________________________________________________________
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
 
 como ficou:
+
 ![level1](./img/level1.PNG)
 
 ### LEVEL 2
@@ -167,6 +187,7 @@ como ficou:
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
 
 como ficou:
+
 ![level2](./img/level2.PNG)
 
 ### LEVEL 3
@@ -179,6 +200,7 @@ como ficou:
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
 
 como ficou:
+
 ![level3](./img/level3.PNG)
 
 ### LEVEL 4
@@ -193,6 +215,7 @@ como ficou:
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
 
 como ficou:
+
 ![level4](./img/level4.PNG)
 
 ### LEVEL 5
@@ -219,6 +242,7 @@ PARTE 2
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
 
 como ficou:
+
 ![level5](./img/level5.PNG)
 
 ### LEVEL 6
@@ -243,6 +267,7 @@ PARTE 2
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
 
 como ficou:
+
 ![level6](./img/level6.PNG)
 
 ### LEVEL 7
@@ -280,6 +305,7 @@ PARTE 3
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
 
 como ficou:
+
 ![level7](./img/level7.PNG)
 
 ### LEVEL 8
@@ -297,6 +323,7 @@ PARTE 1
 - Copie o IP do client D, para D1, somando 1 no host.
 
 - Copie a máscara de D1 para R23.
+
 
 
 - Copie o IP do router R2 para R22, mudando o host para 17.
@@ -327,6 +354,7 @@ PARTE 3
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
 
 como ficou:
+
 ![level8](./img/level8.PNG)
 
 ### LEVEL 9
@@ -393,6 +421,7 @@ PARTE 5
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
 
 como ficou:
+
 ![level9](./img/level9.PNG)
 
 ### LEVEL 10
@@ -404,6 +433,7 @@ PARTE 1
 - Copiar o IP do client H4 para R23.
 
 - Copiar a máscara de H41 para R23.
+
 
 
 - Copiar o IP de R23 para R22, mudando o host para 193.
@@ -435,6 +465,7 @@ Parte 4
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
 
 como ficou:
+
 ![level10](./img/level10.PNG)
 ____________________________________________________________________________________________________
 
