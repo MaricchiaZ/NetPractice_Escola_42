@@ -146,6 +146,9 @@ ________________________________________________________________________________
 
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
 
+como ficou:
+![level1](./img/level1.PNG)
+
 ### LEVEL 2
 
 - Copie a máscara de A1 para B1, agora ajuste o IP de B1 para A1 subtraindo 1 (192.168.98.222 - 1 = 192.168.98.221)
@@ -153,6 +156,9 @@ ________________________________________________________________________________
 - Copie o IP de B1 para D1, e copie o IP de A1 para C1
 
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
+
+como ficou:
+![level2](./img/level2.PNG)
 
 ### LEVEL 3
 
@@ -162,6 +168,9 @@ ________________________________________________________________________________
 (IP de A1 - 104.198.89.125 / IP de B1 - 104.198.89.124 / IP de C1 - 104.198.89.123)
 
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
+
+como ficou:
+![level3](./img/level3.PNG)
 
 ### LEVEL 4
 
@@ -173,6 +182,9 @@ ________________________________________________________________________________
 (IP de A1 - 97.36.115.132 / IP de B1 - 97.36.115.133 / IP de C1 - 97.36.115.134)
 
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
+
+como ficou:
+![level4](./img/level4.PNG)
 
 ### LEVEL 5
 
@@ -197,6 +209,9 @@ PARTE 2
 
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
 
+como ficou:
+![level5](./img/level5.PNG)
+
 ### LEVEL 6
 
 - Divida esse exercício em 2 partes. Roteador->switch S->client A e roteador->internet
@@ -217,6 +232,9 @@ PARTE 2
 (exemplo: IP do client A: 61.182.246.226 // máscara internet I: 61.182.246.0/24)
 
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
+
+como ficou:
+![level6](./img/level6.PNG)
 
 ### LEVEL 7
 
@@ -251,6 +269,9 @@ PARTE 3
 - Ajuste as máscaras de R21 e R12 para 255.255.255.252
 
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
+
+como ficou:
+![level7](./img/level7.PNG)
 
 ### LEVEL 8
 
@@ -295,6 +316,9 @@ PARTE 3
 - Copie o IP de R12 no IP da INTERNET I.
 
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
+
+como ficou:
+![level8](./img/level8.PNG)
 
 ### LEVEL 9
 
@@ -359,6 +383,9 @@ PARTE 5
 
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
 
+como ficou:
+![level9](./img/level9.PNG)
+
 ### LEVEL 10
 
 - Divida esse exercício em 4 partes. 1- Router R2->client H4 e Router R2->client H3 / 2- R11-> client H2 e R11-> client H1 / 3- conexão Router R1->Router R2 / 4 - conexão com a internet
@@ -398,6 +425,8 @@ Parte 4
 
 > Deu tudo certo? clique em "Get my config" e salve o .json desse exercício (você deverá entregá-lo)
 
+como ficou:
+![level10](./img/level10.PNG)
 ____________________________________________________________________________________________________
 
 ### AGORA TREINE ATÉ FICAR AUTOMÁTICO DO 6 ao 10
